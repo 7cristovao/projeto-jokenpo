@@ -1,7 +1,10 @@
-let clique;
+let clique = document.querySelector(".jogador-sorteio");
 let cpuSorteio = document.querySelector(".cpu-sorteio");
 let numeroEscolhido;
 let resultado = document.querySelector(".resultado");
+let placarGeral = document.querySelector(".placarGeral");
+let placarJogador = 0;
+let placarComputador = 0;
 
 // neste passo o computador escolhe entre pedra, papel e tesoura e mostra o resultado
 function sorteioCPU() {
@@ -24,18 +27,23 @@ function sorteioCPU() {
         (numeroEscolhido === 3 && numeroAleatorio === 1)
     ) {
         resultado.innerHTML = `O computador venceu!`;
+        placarJogador = placarJogador + 1;
     } else if (
         (numeroEscolhido === 1 && numeroAleatorio === 3) ||
         (numeroEscolhido === 2 && numeroAleatorio === 1) ||
         (numeroEscolhido === 3 && numeroAleatorio === 2)
     ) {
         resultado.innerHTML = `Você venceu!`;
+        placarComputador = placarComputador + 1;
     }
+
+
+    placarGeral.innerHTML = `Você ${placarJogador} x ${placarComputador} Computador`
+
 }
 
 // evento onde o jogador escolhe pedra
 function clicaPedra() {
-    clique = document.querySelector(".jogador-sorteio");
     clique.innerHTML = `<h2> Você escolheu PEDRA!</h2>`;
     numeroEscolhido = 1;
 
@@ -44,7 +52,6 @@ function clicaPedra() {
 
 // evento onde o jogador escolhe papel
 function clicaPapel() {
-    clique = document.querySelector(".jogador-sorteio");
     clique.innerHTML = `<h2> Você escolheu PAPEL!</h2>`;
     numeroEscolhido = 2;
 
@@ -53,7 +60,6 @@ function clicaPapel() {
 
 // evento onde o jogador escolhe tesoura
 function clicaTesoura() {
-    clique = document.querySelector(".jogador-sorteio");
     clique.innerHTML = `<h2> Você escolheu TESOURA!</h2>`;
     numeroEscolhido = 3;
 

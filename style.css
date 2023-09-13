@@ -2,18 +2,18 @@ body{
     background-color: #f1f5f8;
 }
 
-.body1-container, .body2-container, .jogador-sorteio, .cpu-sorteio{
+.body1-container, .body2-container, .jogador-sorteio, .cpu-sorteio, .placarGeral{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     color: gray;
-    font-size: 3rem;
+    font-size: 1.5rem;
 }
 
 .resultado{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     color: #063251;
-    font-size: 6rem;
+    font-size: 3rem;
 }
 
 .btn {
