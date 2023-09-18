@@ -27,14 +27,14 @@ function sorteioCPU() {
         (numeroEscolhido === 3 && numeroAleatorio === 1)
     ) {
         resultado.innerHTML = `O computador venceu!`;
-        placarJogador = placarJogador + 1;
+        placarComputador = placarComputador + 1;
     } else if (
         (numeroEscolhido === 1 && numeroAleatorio === 3) ||
         (numeroEscolhido === 2 && numeroAleatorio === 1) ||
         (numeroEscolhido === 3 && numeroAleatorio === 2)
     ) {
         resultado.innerHTML = `Você venceu!`;
-        placarComputador = placarComputador + 1;
+        placarJogador = placarJogador + 1;
     }
 
 
